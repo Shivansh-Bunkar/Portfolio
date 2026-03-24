@@ -1,0 +1,148 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+    /* Set the image on the body so it shows behind everything */
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.4), transparent), url("/image.jpg") center/cover no-repeat fixed;
+    color: #1f2937;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    position: sticky;
+    top: 0;
+    /* z-index: 100; */
+    /* FIXED: Added commas between colors */
+    background: linear-gradient(to left, rgba(112, 86, 86, 0.8), rgba(97, 134, 97, 0.8), rgba(63, 63, 80, 0.8));
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 28px;
+}
+
+.nav-logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    /* Changed to white for better contrast */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+/* =========================
+   CONTAINERS (Blurry White Style)
+========================= */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.faq-section,
+form {
+    margin-bottom: 35px;
+    padding: 25px;
+    /* Blurry White "Glass" Effect */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   FAQ ITEMS
+========================= */
+.faq-item {
+    /* FIXED: Added commas */
+    background: linear-gradient(to left, rgba(112, 86, 86, 0.3), rgba(63, 63, 80, 0.3));
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.faq-item:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.question {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.answer {
+    color: #e5e7eb;
+    margin-top: 8px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    /* Blurry input */
+    color: white;
+    outline: none;
+}
+
+form button {
+    background: #2563eb;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    #home {
+        font-size: 1.5rem;
+    }
+
+    .faq-section {
+        padding: 15px;
+    }
+}
